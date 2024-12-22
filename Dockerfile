@@ -18,4 +18,4 @@ RUN /bin/bash -c "source /opt/ros/noetic/setup.bash && cd /catkin_ws && catkin_m
 
 # Start
 RUN sed -i '/exec "\$@"/i source /catkin_ws/devel/setup.bash' /ros_entrypoint.sh
-# SHELL ["/bin/bash", "-c"]
+SHELL ["/bin/bash", "-c"]
