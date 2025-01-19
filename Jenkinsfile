@@ -18,7 +18,7 @@ pipeline {
     stage('Test') {
       steps {
         sh """
-          docker run --name ${CONTAINER_NAME} --rm -v /tmp/.X11-unix:/tmp/.X11-unix -v $HOME/.Xauthority:/root/.Xauthority -e DISPLAY=$DISPLAY --runtime=nvidia --gpus all --device /dev/dri ${IMAGE_NAME} rostest tortoisebot_waypoints waypoints_test.test headless:=${params.HEADLESS}
+          docker run --name ${CONTAINER_NAME} --rm -v /tmp/.X11-unix:/tmp/.X11-unix -v $HOME/.Xauthority:/root/.Xauthority -e DISPLAY=$DISPLAY ${IMAGE_NAME} rostest tortoisebot_waypoints waypoints_test.test headless:=${params.HEADLESS}
         """
       }
     }
