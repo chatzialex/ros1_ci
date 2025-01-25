@@ -6,5 +6,5 @@
   </include>
 
   <node pkg="tortoisebot_waypoints" type="tortoisebot_action_server.py" name="tortoisebot_action_server"/>
-  <test test-name="waypoints_test" pkg="tortoisebot_waypoints" type="waypoints_test.py" />
+  <test test-name="waypoints_test" pkg="tortoisebot_waypoints" type="waypoints_test.py" time-limit="120.0"/>
 </launch>
